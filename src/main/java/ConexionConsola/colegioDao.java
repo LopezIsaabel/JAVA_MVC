@@ -76,13 +76,13 @@ public class colegioDao {
     }
 
     public void eliminar(int codigo) {
-        String sql = "Delete from alumnos where codigo="+codigo+";";
+        String sql = "Delete from alumnos where codigo=" + codigo + ";";
 
         try {
             con = acceso.Conectar();
             ps = con.prepareStatement(sql);
             ps.executeUpdate();
-            
+
         } catch (Exception e) {
         }
     }
