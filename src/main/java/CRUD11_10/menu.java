@@ -71,7 +71,7 @@ public class menu {
 
                 System.out.println("Ingrese cantidad de ingreso");
                 int cantidad = sp2.nextInt();
-
+                sp.nextLine();
                 System.out.println("Ingrese lugar de fabricacion");
                 String lugar = sp2.nextLine();
 

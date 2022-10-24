@@ -87,6 +87,22 @@ public class colegioDao {
         }
     }
 
+    public void buscar(int codigo){
+    String sql="select * from alumnos where codigo= "+codigo;
+        try {
+            con= acceso.Conectar();
+            ps= con.prepareStatement(sql);
+            rs= ps.executeQuery();
+            if (rs.next()) {                
+                
+            }else{
+                System.out.println("Nombre: "+rs.getString(2));
+            }
+        } catch (Exception e) {
+        }
+    }
+    
+   
     public static void main(String[] args) {
         colegioDao cl = new colegioDao();
         cl.listar();

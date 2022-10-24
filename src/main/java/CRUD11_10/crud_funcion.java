@@ -4,7 +4,6 @@
  */
 package CRUD11_10;
 
-import ConexionConsola.conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -17,10 +16,10 @@ public class crud_funcion {
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
-    conexion acceso = new conexion();
+    Conexion acceso = new Conexion();
    
     public void listar() {
-        String sql = "select * from alumnos";
+        String sql = "select * from productos";
         try {
             //inicializa la base de datos
             con = acceso.Conectar();
@@ -42,7 +41,7 @@ public class crud_funcion {
     
     
         public void crear(int codigo, String nombre, int cantidad, String lugar, String fecha) {
-        String sql = "insert into alumnos(codigo, nombre,cantidad, lugar, fecha) values(?,?,?,?,?);";
+        String sql = "insert into productos(codigo, nombre,cantidad, lugar, fecha) values(?,?,?,?,?);";
         try {
             con = acceso.Conectar();
             ps = con.prepareStatement(sql);
@@ -62,7 +61,7 @@ public class crud_funcion {
     }
         
          public void modificar(int codigo, String nombre, int cantidad, String lugar, String fecha) {
-        String sql = "update alumnos set nombre=?, cantidad=?, lugar=?, fecha=? where codigo=?";
+        String sql = "update productos set nombre=?, cantidad=?, lugar=?, fecha=? where codigo=?";
 
         try {
             con = acceso.Conectar();

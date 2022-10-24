@@ -129,6 +129,11 @@ public class Crear extends javax.swing.JFrame {
         // TODO add your handling code here:
         colegioDao cl= new colegioDao();
         cl.crear(Integer.parseInt(t_id.getText()), t_nombre.getText(),t_direc.getText(),Integer.parseInt(t_telefono.getText()));
+       t_id.setText(null);
+       t_nombre.setText(null);
+       t_direc.setText(null);
+       t_telefono.setText(null);
+           
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
